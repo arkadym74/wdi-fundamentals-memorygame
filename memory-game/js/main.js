@@ -40,13 +40,11 @@ var createBoard = function(){
 	}
 };
 
-
-
 var flipCard = function() {
 
 var cardId = this.getAttribute('data-id');
 
-this.setAttribute("src", cards[cardId].cardImage);
+this.setAttribute('src',cards[cardId].cardImage);
    
 	if(cardsInPlay[cardId]===cardsInPlay[cardId]) {
 
