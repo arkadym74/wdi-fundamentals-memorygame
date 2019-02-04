@@ -1,5 +1,7 @@
+//Fires when HTML document has been completely loaded and parsed.
 document.addEventListener("DOMContentLoaded", function(event) {
 
+//Creates a cards array object
 var cards = [
  {
  	rank: "queen",
@@ -28,8 +30,10 @@ var cards = [
 
 ];
 
+//Defines and initiates an array to pass in the values from cards object.
 var cardsInPlay = [];
 
+//Finction to check when two cards are selected, if they match
 var checkForMatch = function() {
 
 	if(cardsInPlay[0] === cardsInPlay[1]){
@@ -41,7 +45,7 @@ var checkForMatch = function() {
 
   }
 
-
+//Function that fires flipping of the cards from back side to front.
 var flipCard = function() {
 
 var cardId = this.getAttribute('data-id');
@@ -56,6 +60,7 @@ if (cardsInPlay.length === 2) {
   }
 };
 
+//Function that loads card images to the board.
 var createBoard = function(){
 	for(var i = 0; i < cards.length; i++) {
 		
@@ -67,7 +72,12 @@ var createBoard = function(){
 
 	}
 };
-
+//Fires above function. 
 createBoard();
 
 });
+
+//Refreshes browser's page to reload the game in HTML button.
+function reloadGame() {
+	window.location.reload();
+};

@@ -115,3 +115,13 @@ footer p {
 	color: #F15B31;
 	font-weight: 700;
 }
+
+.button-properties {
+	font-size: 26px;
+	background-color: #000000;
+	color: #008000;
+	border: 2px solid black;
+	border-radius: 5px;
+	box-shadow: 3.5px 3.5px;
+	text-shadow: 2px 2px 4px #FFFF00;
+}
